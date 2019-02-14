@@ -14,6 +14,7 @@
 		182BEC7A22123C24009C3514 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182BEC7822123C24009C3514 /* LaunchScreen.storyboard */; };
 		182BEC8222124026009C3514 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182BEC8122124026009C3514 /* HomeViewController.swift */; };
 		182BEC8422126952009C3514 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182BEC8322126952009C3514 /* CameraViewController.swift */; };
+		185453BE221354120068D59E /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185453BD221354120068D59E /* PostCell.swift */; };
 		82C7F9FE53D8E741649247A0 /* Pods_InstaParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5155E4845338A1BCCF3DE2A /* Pods_InstaParse.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		182BEC7B22123C24009C3514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182BEC8122124026009C3514 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		182BEC8322126952009C3514 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		185453BD221354120068D59E /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		6A1427B1755000B1CA44F4CA /* Pods-InstaParse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaParse.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaParse/Pods-InstaParse.release.xcconfig"; sourceTree = "<group>"; };
 		C5155E4845338A1BCCF3DE2A /* Pods_InstaParse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaParse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD44447D04581CFC2C549EE4 /* Pods-InstaParse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaParse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaParse/Pods-InstaParse.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,8 +77,9 @@
 			children = (
 				182BEC6F22123C22009C3514 /* AppDelegate.swift */,
 				182BEC7122123C22009C3514 /* LoginViewController.swift */,
-				182BEC8322126952009C3514 /* CameraViewController.swift */,
 				182BEC8122124026009C3514 /* HomeViewController.swift */,
+				182BEC8322126952009C3514 /* CameraViewController.swift */,
+				185453BD221354120068D59E /* PostCell.swift */,
 				182BEC7322123C22009C3514 /* Main.storyboard */,
 				182BEC7622123C24009C3514 /* Assets.xcassets */,
 				182BEC7822123C24009C3514 /* LaunchScreen.storyboard */,
@@ -224,6 +227,7 @@
 				182BEC8422126952009C3514 /* CameraViewController.swift in Sources */,
 				182BEC7022123C22009C3514 /* AppDelegate.swift in Sources */,
 				182BEC8222124026009C3514 /* HomeViewController.swift in Sources */,
+				185453BE221354120068D59E /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
