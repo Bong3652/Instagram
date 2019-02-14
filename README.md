@@ -1,6 +1,7 @@
 # Instagram
 
 Instagram is an app that allows users create an "Instagram" account under a parse server and post pictures to parse.
+
 ---
 
 ## Instagram Part 1
