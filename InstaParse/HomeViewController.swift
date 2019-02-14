@@ -35,7 +35,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = postTableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
         let post = posts[indexPath.row]
         let user = post["owner"] as! PFUser
-        cell.userLabel.text = "\(user.username):"
+        cell.userLabel.text = user.username
         cell.captionLabel.text = post["caption"] as! String
         
         let imageFile = post["image"] as! PFFileObject
