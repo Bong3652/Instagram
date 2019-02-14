@@ -9,11 +9,11 @@ Instagram is an app that allows users create an "Instagram" account under a pars
 ### User Stories
 
 #### REQUIRED (?pts)
-- [ ] (?pts) User sees app icon in home screen and styled launch screen.
-- [ ] (?pts) User can sign up to create a new account.
-- [ ] (?pts) User can log in.
-- [ ] (?pts) User can take a photo, add a caption, and post it to the server.
-- [ ] User can view the last 20 posts.
+- [x] (?pts) User sees app icon in home screen and styled launch screen.
+- [x] (?pts) User can sign up to create a new account.
+- [x] (?pts) User can log in.
+- [x] (?pts) User can take a photo, add a caption, and post it to the server.
+- [x] (?pts) User can view the last 20 posts.
 
 ### App Walkthough GIF
 
