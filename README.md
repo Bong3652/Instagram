@@ -17,4 +17,4 @@ Instagram is an app that allows users create an "Instagram" account under a pars
 
 ### App Walkthough GIF
 
-<img src="YOUR_GIF_URL_HERE" width=250><br>
+<img src="./InstaParse1.0.gif" width=250><br>
