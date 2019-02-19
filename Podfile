@@ -8,5 +8,6 @@ target 'InstaParse' do
   # Pods for InstaParse
   pod "Parse"
   pod "AlamofireImage"
+  pod "MessageInputBar"
 
 end

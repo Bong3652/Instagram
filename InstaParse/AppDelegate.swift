@@ -24,6 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://sleepy-savannah-44438.herokuapp.com/parse"
             })
         )
+        
+        if PFUser.current() != nil {
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let FeedNav = main.instantiateViewController(withIdentifier: "FeedNav")
+            window?.rootViewController = FeedNav
+        }
         return true
     }
 
