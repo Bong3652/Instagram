@@ -17,6 +17,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let commentBar = MessageInputBar()
     var posts = [PFObject]()
     var showCommentBar = false
+    var currentPost:PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         postTableView.dataSource = self
         postTableView.keyboardDismissMode = .interactive
         
+        commentBar.delegate = self
         commentBar.inputTextView.placeholder = "Add a comment..."
         commentBar.sendButton.title = "Post"
-        commentBar.delegate = self
         // Do any additional setup after loading the view.
         
         let center = NotificationCenter.default
@@ -53,25 +54,28 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+        
         let comment = PFObject(className: "comments")
         
-//        comment["text"] = inputBar.inpu
-//        comment["post"] = post
-//        comment["owner"] = PFUser.current()
-//
-//        post.add(comment, forKey: "comments")
-//        post.saveInBackground { (success, error) in
-//            if success {
-//                print("cool")
-//            } else {
-//                print(error)
-//            }
-//        }
+        comment["text"] = text
+        comment["post"] = currentPost
+        comment["owner"] = PFUser.current()
+
+        currentPost.add(comment, forKey: "comments")
+        currentPost.saveInBackground { (success, error) in
+            if success {
+                print("cool")
+            } else {
+                print(error)
+            }
+        }
+        postTableView.reloadData()
 
         commentBar.inputTextView.text = nil
+        
         showCommentBar = false
         becomeFirstResponder()
-        commentBar.inputTextView.becomeFirstResponder()
+        commentBar.inputTextView.resignFirstResponder()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -158,8 +162,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let post = posts[indexPath.row]
+        let post = posts[indexPath.section]
         let comments = (post["comments"] as? [PFObject]) ?? []
+        currentPost = post
         //let comment = PFObject(className: "comments")
         
 //        comment["text"] = "hello"
@@ -174,7 +179,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 //                print(error)
 //            }
 //        }
-        if indexPath.row == comments.count {
+        if indexPath.row == comments.count + 1 {
             showCommentBar = true
             becomeFirstResponder()
             commentBar.inputTextView.becomeFirstResponder()
